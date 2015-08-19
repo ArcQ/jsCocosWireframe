@@ -14,11 +14,11 @@
         "src/resource.js",
         "src/app.js",
         "src/model/StateModel.js",
-        "src/view/LoadView/LoadLayer.js",
-        "src/view/LoadView/LoadScene.js",
-        "src/MainView/GameLayer0.js",
-        "src/MainView/MainScene.js",
-        "src/MainView/MenuLayer.js",
+        "src/view/LogoView/LogoLayer.js",
+        "src/view/LogoView/LogoScene.js",
+        "src/view/MainView/GameMainLayer.js",
+        "src/view/MainView/MainScene.js",
+        "src/view/MainView/MenuLayer.js",
         "src/controller/GameController.js",
         "src/controller/MainController.js"
     ]
