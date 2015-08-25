@@ -15,11 +15,10 @@
         "src/app.js",
         "src/model/StateModel.js",
         "src/view/LogoView/LogoLayer.js",
-        "src/view/LogoView/LogoScene.js",
         "src/view/MainView/GameMainLayer.js",
-        "src/view/MainView/MainScene.js",
         "src/view/MainView/MenuLayer.js",
-        "src/controller/GameController.js",
-        "src/controller/MainController.js"
+        "src/controller/GameCtrl.js",
+        "src/controller/LoadSceneCtrl.js",
+        "src/controller/MainCtrl.js"
     ]
 }
