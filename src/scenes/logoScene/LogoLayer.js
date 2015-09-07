@@ -7,9 +7,6 @@ var LogoLayer = cc.Layer.extend({
 
         var size = cc.winSize;
 
-        // Add logoSprite as splash screen
-        console.log(loadRes);
-
         var logoSprite = new cc.Sprite(loadRes.Logo_png);
         logoSprite.attr({
             x: size.width / 2,
@@ -17,17 +14,18 @@ var LogoLayer = cc.Layer.extend({
             scale: 0.2,
         });
 
+
+
         this.loadingBar = new cc.ProgressTimer(cc.Sprite.create(loadRes.CircleLoadingBar_png));
         this.loadingBar.attr({
             x: size.width / 2,
             y: size.height / 2,
-            scale: 0.35,
+            scale: 0.35
         });
-
+        this.loadingBar.setPercentage(0);
 
         this.addChild(logoSprite, 0);
         this.addChild(this.loadingBar, 1);
-
 
         return true;
     }
