@@ -25,7 +25,6 @@ Ctrl.prototype.start = function(){
 			this.menuOne = new MenuOne();
 			this.menuOne.start();
 		}
-		console.log(this.menuOne.getLayer());
 		this.view.addLayer(this.menuOne.getLayer());
 	}
 };

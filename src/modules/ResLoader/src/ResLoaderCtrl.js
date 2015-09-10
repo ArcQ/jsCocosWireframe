@@ -12,11 +12,12 @@ var ResLoaderCtrl = function(){
 
 ResLoaderCtrl.prototype.loadResources = function(resources,isShowAnimation,cb){
     //native machines don't need preload function, show layer for a few seconds instead
+    this.isShowAnimation = isShowAnimation;
+    //if it's native, we don't need to load, just callback
     if(cc.sys.isNative){
-        this.view.skipLoad.call(this.view,cb);
+        cb();
         return;
     }
-    this.isShowAnimation = isShowAnimation;
     if(this.isShowAnimation === true){
         this.view.delayedCb = cb;
         this.view.startUpdate.call(this.view);

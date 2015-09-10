@@ -18,7 +18,6 @@ ResLoaderView.prototype.startUpdate = function(){
 };
 
 ResLoaderView.prototype.skipLoad = function(cb){
-    console.log(cb);
     this.scheduleOnce(
         function(){
             cb();

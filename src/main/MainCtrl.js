@@ -3,8 +3,6 @@ var MainCtrl = {
 };
 
 MainCtrl.start= function(){
-    cc.log("hey");
-    cc.log(window.GameSceneOne);
     var resLoader = new window.ResLoader();
     //loadResources is called twice here, once after the first one finishes
     //first one is to load the assets for the load animation, second one is for rest of assets while displaying load animation
@@ -34,6 +32,11 @@ MainCtrl.start= function(){
             );
         }
     );
+//    MainCtrl.GameSceneOne = new window.GameSceneOne();
+//    cc.log(MainCtrl.GameSceneOne);
+//    MainCtrl.GameSceneOne.start();
+//    scene = MainCtrl.GameSceneOne.getScene();
+//    cc.director.runScene(scene);
 };
 
 MainCtrl.changeScene = function(id){

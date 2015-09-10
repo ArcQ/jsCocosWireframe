@@ -68,7 +68,6 @@ View.prototype.toggleSecondMenu = function(isShowMenu){
 
     for (var btn in this.menuItems) {
       if (this.menuItems.hasOwnProperty(btn)) {
-        console.log(btn);
         this.menuItems[btn].visible=isShowMenu;
       }
     }
