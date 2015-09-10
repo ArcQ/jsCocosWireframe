@@ -1,20 +1,16 @@
 var MainCtrl = {
-    loadSceneCtrl:null,
-    mainSceneCtrl:null
+    GameSceneOne:null
 };
 
-MainCtrl.initControllers = function(){
-    this.gameSceneCtrl = new GameSceneCtrl();
-}
-
 MainCtrl.start= function(){
-    this.initControllers();
+    cc.log("hey");
+    cc.log(window.GameSceneOne);
     var resLoader = new window.ResLoader();
     //loadResources is called twice here, once after the first one finishes
     //first one is to load the assets for the load animation, second one is for rest of assets while displaying load animation
     resLoader.loadResources.call(
         resLoader,
-        0,
+        "Init",
         load_resources,
         false,
         function(){
@@ -27,10 +23,9 @@ MainCtrl.start= function(){
             resView.addChild(logoLayer);
             resView.loadingBar = logoLayer.loadingBar;
 
-
             resLoaderTwo.loadResources.call(
                 resLoaderTwo,
-                1,
+                "Main",
                 g_resources,
                 true,
                 function(){
@@ -42,14 +37,28 @@ MainCtrl.start= function(){
 };
 
 MainCtrl.changeScene = function(id){
+    var scene = null;
     switch(id){
         case "Main":
-            cc.director.runScene(this.gameSceneCtrl);
+
+            if(MainCtrl.GameSceneOne === null){
+                if(window.ResLoader.isKeyAdded("Main") === true){
+                    MainCtrl.GameSceneOne = new window.GameSceneOne();
+                    MainCtrl.GameSceneOne.start();
+                    scene = MainCtrl.GameSceneOne.getScene();
+                }
+                else{
+                    cc.log("Load resources needed for scene before trying to run it");
+                }
+            }
+
             break;
         default:
-            cc.director.runScene(new HelloWorldScene());
+            scene = new HelloWorldScene();
             break;
     }
+    cc.director.runScene(scene);
+
 };
 
 

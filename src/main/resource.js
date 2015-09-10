@@ -15,7 +15,7 @@ var res = {
     testOne_png:"res/5FVJ2PSHJS.jpg",
     testTwo_png:"res/96LJZ9JPB6.jpg",
     testThree_png:"res/EKVFZ0A22C.jpg",
-    background_png:"res/background.jpg",
+    background_png:"res/background.jpg"
 
 };
 
@@ -27,7 +27,7 @@ var iconRes = {
     refreshBtn_png:"res/Icons/refreshBtn.png",
     refreshBtnH_png:"res/Icons/refreshBtnH.png",
     soundBtn_png:"res/Icons/soundBtn.png",
-    soundBtnH_png:"res/Icons/soundBtnH.png",
+    soundBtnH_png:"res/Icons/soundBtnH.png"
 }
 
 var g_resources = [];

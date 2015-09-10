@@ -11,13 +11,11 @@
     "modules" : ["cocos2d"],
 
     "jsList" : [
-        "src/modules/ResLoader/ResLoaderMod.js",
+        "src/modules/ResLoader/ResLoader.js",
         "src/main/resource.js",
         "src/main/models/StateModel.js",
         "src/scenes/logoScene/LogoLayer.js",
-        "src/scenes/gameScene/GameMainLayer.js",
-        "src/scenes/gameScene/MainMenuLayer.js",
-        "src/scenes/gameScene/GameSceneCtrl.js",
+        "src/scenes/gameSceneOne/GameSceneOne.js",
         "src/main/MainCtrl.js"
     ]
 }
